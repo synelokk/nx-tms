@@ -1,0 +1,46 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2021",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@tms/common": [
+        "libs/common/src/index.ts"
+      ],
+      "@tms/constant": [
+        "libs/constant/src/index.ts"
+      ],
+      "@tms/utils": [
+        "libs/utils/src/index.ts"
+      ]
+    },
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

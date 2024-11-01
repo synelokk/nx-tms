@@ -1,0 +1,17 @@
+{
+    "DATABASE_ERROR": "Database error",
+    "PROPERTY_REQUIRED": "{key} is required",
+    "USER_NOT_FOUND": "User not found",
+    "USER_ALREADY_EXISTS": "User already exists",
+    "INVALID_CREDENTIALS": "Invalid credentials",
+    "INVALID_TOKEN": "Invalid token",
+    "TOKEN_EXPIRED": "Token expired",
+    "TOKEN_NOT_FOUND": "Token not found",
+    "TOKEN_REQUIRED": "Token required",
+    "INTERNAL_SERVER_ERROR": "Internal server error",
+    "DATA_NOT_FOUND": "Data not found",
+    "INVALID_COLUMN": "Invalid column",
+    "INVALID_TABLE": "Invalid table",
+    "INVALID_QUERY": "Invalid query",
+    "INSERT_FAILED": "Failed to insert data"
+}

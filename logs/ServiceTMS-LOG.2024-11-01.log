@@ -1,0 +1,867 @@
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'warn')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'warn')\n    at C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4806:38\n    at step (C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4770:23)\n    at Object.next (C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4711:20)\n    at request_middleware_asyncGeneratorStep (C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4659:28)\n    at _next (C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4677:17)\n    at C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4682:13\n    at new Promise (<anonymous>)\n    at C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4674:16\n    at RequestMiddleware.use (C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4818:11)\n    at C:\\~\\dev\\nx\\tms\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:23"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'warn')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'warn')\n    at C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4806:38\n    at step (C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4770:23)\n    at Object.next (C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4711:20)\n    at request_middleware_asyncGeneratorStep (C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4659:28)\n    at _next (C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4677:17)\n    at C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4682:13\n    at new Promise (<anonymous>)\n    at C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4674:16\n    at RequestMiddleware.use (C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:4818:11)\n    at C:\\~\\dev\\nx\\tms\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:23"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(78528269-1d83-4db1-b892-f37982b1ccdf) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"RequestMiddleware","level":"error","message":"connect ECONNREFUSED ::1:3001 Request http://:3000/tms/api/v1/client","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'message')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'message')\n    at C:\\~\\dev\\nx\\tms\\dist\\apps\\tms\\main.js:2047:55\n    at C:\\~\\dev\\nx\\tms\\node_modules\\rxjs\\src\\internal\\operators\\catchError.ts:117:35\n    at OperatorSubscriber._this._error (C:\\~\\dev\\nx\\tms\\node_modules\\rxjs\\src\\internal\\operators\\OperatorSubscriber.ts:79:13)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(697afc2b-5036-405f-833e-11343f14376b) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"RequestMiddleware","level":"error","message":"connect ECONNREFUSED ::1:3001 Request http://:3000/tms/api/v1/client","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'message')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'message')\n    at C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:2054:55\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\catchError.ts:117:35\n    at OperatorSubscriber._this._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\OperatorSubscriber.ts:79:13)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\observable\\innerFrom.ts:94:34\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(b0199e34-815f-47c5-95c1-6201b19720f6) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'message')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'message')\n    at C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:2054:55\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\catchError.ts:117:35\n    at OperatorSubscriber._this._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\OperatorSubscriber.ts:79:13)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\observable\\innerFrom.ts:94:34\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'warn')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'warn')\n    at C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:4861:38\n    at step (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:4806:23)\n    at Object.next (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:4747:20)\n    at request_middleware_asyncGeneratorStep (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:4695:28)\n    at _next (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:4713:17)\n    at C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:4718:13\n    at new Promise (<anonymous>)\n    at C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:4710:16\n    at RequestMiddleware.use (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:4873:11)\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:23"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(4b56e9db-3d12-4511-bc8b-bc345223fc02) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'message')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'message')\n    at C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:2071:55\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\catchError.ts:117:35\n    at OperatorSubscriber._this._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\OperatorSubscriber.ts:79:13)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\observable\\innerFrom.ts:94:34\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(8e64b683-6a09-4c53-9799-7b1b52e47531) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'message')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'message')\n    at C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:2071:55\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\catchError.ts:117:35\n    at OperatorSubscriber._this._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\OperatorSubscriber.ts:79:13)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\observable\\innerFrom.ts:94:34\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(d601852f-5d86-40e8-91e7-19ef797b04c1) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'message')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'message')\n    at C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:2072:55\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\catchError.ts:117:35\n    at OperatorSubscriber._this._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\OperatorSubscriber.ts:79:13)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\observable\\innerFrom.ts:94:34\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"]}
+{"context":"RequestMiddleware","level":"warn","message":"(24d83e28-e263-4b5f-95d6-621c15f6554c) Request http://:3000/tms/api/v1/clients","service":"TMS"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(96a1385b-e665-42c9-be29-36e70972e89b) Request http://:3000/tms/api/v1/clients","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(488ff772-4aa3-4f6f-9114-ca72a0e58b77) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'message')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'message')\n    at C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:2071:55\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\catchError.ts:117:35\n    at OperatorSubscriber._this._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\OperatorSubscriber.ts:79:13)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\observable\\innerFrom.ts:94:34\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(02a5b014-fa0f-454d-8da3-65550238baa4) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ExceptionsHandler","level":"error","message":"Cannot read properties of undefined (reading 'message')","service":"TMS","stack":["TypeError: Cannot read properties of undefined (reading 'message')\n    at C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:2071:55\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\catchError.ts:117:35\n    at OperatorSubscriber._this._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\operators\\OperatorSubscriber.ts:79:13)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at OperatorSubscriber.Subscriber._error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:124:24)\n    at OperatorSubscriber.Subscriber.error (C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\Subscriber.ts:91:12)\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\rxjs\\src\\internal\\observable\\innerFrom.ts:94:34\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(97fe1c92-7618-4fdb-85fa-7fc6c110f1dc) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ErrorInterceptor","level":"error","message":"(97fe1c92-7618-4fdb-85fa-7fc6c110f1dc) Login failed for user 'sa'.","service":"TMS","stack":["SequelizeDatabaseError: Login failed for user 'sa'.\n    at ClientRepository.findAll (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:1098:19)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at ClientService.findAll (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:3435:22)\n    at ClientController.findAll (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:3590:23)"]}
+{"context":"ErrorInterceptor","level":"warn","message":"(97fe1c92-7618-4fdb-85fa-7fc6c110f1dc) Response http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(3e5cbffe-46bb-4267-bb13-14a99ee32388) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ClientController","level":"debug","message":"(3e5cbffe-46bb-4267-bb13-14a99ee32388) Call service findAll","service":"TMS"}
+{"context":"ResponseInterceptor","level":"warn","message":"(3e5cbffe-46bb-4267-bb13-14a99ee32388) Response Success get all clients","service":"TMS"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(8eaf76a2-2cc1-4bd3-8f67-61c6cfc4296e) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ClientController","level":"debug","message":"(8eaf76a2-2cc1-4bd3-8f67-61c6cfc4296e) Call service findAll","service":"TMS"}
+{"context":"ResponseInterceptor","level":"warn","message":"(8eaf76a2-2cc1-4bd3-8f67-61c6cfc4296e) Response Success get all clients","service":"TMS"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(aae61f79-d9f0-4b51-9998-6c6e3914eebb) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ErrorInterceptor","level":"error","message":"(aae61f79-d9f0-4b51-9998-6c6e3914eebb) Cannot read properties of undefined (reading 'order')","service":"TMS","stack":["SequelizeDatabaseError: Cannot read properties of undefined (reading 'order')\n    at ClientRepository.findAll (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:1112:19)\n    at ClientService.findAll (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:3449:44)\n    at ClientController.findAll (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:3604:48)\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:38:29\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"]}
+{"context":"ErrorInterceptor","level":"warn","message":"(aae61f79-d9f0-4b51-9998-6c6e3914eebb) Response http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(4293dcaa-9f6a-4b1c-9c44-22910f31d7a2) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ClientController","level":"debug","message":"(4293dcaa-9f6a-4b1c-9c44-22910f31d7a2) Call service findAll","service":"TMS"}
+{"context":"ResponseInterceptor","level":"warn","message":"(4293dcaa-9f6a-4b1c-9c44-22910f31d7a2) Response Success get all clients","service":"TMS"}
+{"code":"ECONNRESET","context":"ClientTCP","errno":-4077,"error":{"code":"ECONNRESET","errno":-4077,"syscall":"read"},"level":"error","message":"read ECONNRESET","service":"TMS","stack":["Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"],"syscall":"read"}
+{"context":"RequestMiddleware","level":"warn","message":"(6eb46c27-a7be-403b-82cf-cf421094f281) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"RequestMiddleware","level":"error","message":"connect ECONNREFUSED ::1:3001 Request http://:3000/tms/api/v1/client","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
+{"context":"ClientController","level":"debug","message":"(6eb46c27-a7be-403b-82cf-cf421094f281) Call service findAll","service":"TMS"}
+{"context":"ClientController","level":"error","message":"connect ECONNREFUSED ::1:3001 Call service findAll","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
+{"context":"ResponseInterceptor","level":"warn","message":"(6eb46c27-a7be-403b-82cf-cf421094f281) Response Success get all clients","service":"TMS"}
+{"context":"ResponseInterceptor","level":"error","message":"connect ECONNREFUSED ::1:3001 Response Success get all clients","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(e30a27f2-6db4-40d9-a05f-d7156cc921cc) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"ErrorInterceptor","level":"error","message":"(e30a27f2-6db4-40d9-a05f-d7156cc921cc) Cannot read properties of undefined (reading 'findAll')","service":"TMS","stack":["SequelizeDatabaseError: Cannot read properties of undefined (reading 'findAll')\n    at ClientRepository.findAll (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:1116:19)\n    at ClientService.findAll (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:3455:44)\n    at ClientController.findAll (C:\\~\\dev\\nx\\nx-tms\\dist\\apps\\tms\\main.js:3614:48)\n    at C:\\~\\dev\\nx\\nx-tms\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:38:29\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"]}
+{"context":"ErrorInterceptor","level":"warn","message":"(e30a27f2-6db4-40d9-a05f-d7156cc921cc) Response http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"RequestMiddleware","level":"error","message":"connect ECONNREFUSED ::1:3001 Request http://:3000/tms/api/v1/client","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
+{"context":"ErrorInterceptor","level":"error","message":"connect ECONNREFUSED ::1:3001 Cannot read properties of undefined (reading 'findAll')","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
+{"context":"ErrorInterceptor","level":"error","message":"connect ECONNREFUSED ::1:3001 Response http://:3000/tms/api/v1/client","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientsModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AuthorizationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"DBAuthModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigurationModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"SequelizeCoreModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"ClientModule dependencies initialized","service":"TMS"}
+{"context":"InstanceLoader","level":"info","message":"UserModule dependencies initialized","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, POST} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/test-sp, GET} (version: 1) route","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client/:id, GET} (version: 1) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"ClientController {/tms/api/client} (version: 2):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/client, GET} (version: 2) route","service":"TMS"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/tms/api} (version: 1):","service":"TMS"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/tms/api/login, POST} (version: 1) route","service":"TMS"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","service":"TMS"}
+{"level":"info","message":"🚀 Application is running on: http://localhost:3000/tms/api","service":"TMS"}
+{"context":"RequestMiddleware","level":"warn","message":"(94f32b5e-767c-43d2-9c12-892ce6fe4526) Request http://:3000/tms/api/v1/client","service":"TMS"}
+{"context":"RequestMiddleware","level":"error","message":"connect ECONNREFUSED ::1:3001 Request http://:3000/tms/api/v1/client","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
+{"context":"ClientController","level":"debug","message":"(94f32b5e-767c-43d2-9c12-892ce6fe4526) Call service findAll","service":"TMS"}
+{"context":"ClientController","level":"error","message":"connect ECONNREFUSED ::1:3001 Call service findAll","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
+{"context":"ResponseInterceptor","level":"warn","message":"(94f32b5e-767c-43d2-9c12-892ce6fe4526) Response Success get all clients","service":"TMS"}
+{"context":"ResponseInterceptor","level":"error","message":"connect ECONNREFUSED ::1:3001 Response Success get all clients","service":"TMS","stack":["Error: connect ECONNREFUSED ::1:3001\n    at createConnectionError (node:net:1651:14)\n    at afterConnectMultiple (node:net:1681:16)"]}
