@@ -4,6 +4,7 @@ import { APP } from './configuration.config';
 import { ConfigurationService } from './configrutaion.service';
 import { ClientRoleRepository } from '../database/client/repository/client-role.repository';
 import { ClientRepository } from '../database/client/repository/client.repository';
+import { ServiceConfigurationRepository } from '../database/product/repository/service-configuration.repository';
 /**
  * An array of environment file names used for configuration.
  *
@@ -43,7 +44,17 @@ const ENV = [`.env`, `.env.local`, `.env.development`];
       envFilePath: ENV,
     }),
   ],
-  providers: [ConfigurationService, ClientRoleRepository, ClientRepository],
-  exports: [ConfigurationService, ClientRoleRepository, ClientRepository],
+  providers: [
+    ConfigurationService,
+    ClientRoleRepository,
+    ClientRepository,
+    ServiceConfigurationRepository,
+  ],
+  exports: [
+    ConfigurationService,
+    ClientRoleRepository,
+    ClientRepository,
+    ServiceConfigurationRepository,
+  ],
 })
 export class ConfigurationModule {}

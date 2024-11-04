@@ -1,58 +1,66 @@
-import dayjs from 'dayjs';
-import { Column, DataType, Default, Model, Table } from 'sequelize-typescript';
+import { Column, DataType, Model, Table } from 'sequelize-typescript';
 
 @Table({
-  tableName: 'client',
+  tableName: 'service_configuration',
   schema: 'dbo',
   timestamps: false,
 })
-export class Client extends Model {
+export class ServiceConfiguration extends Model {
+  // #regions basic columns
   @Column({
     field: 'id',
     type: DataType.INTEGER,
   })
   public override id!: number;
 
-  // #regions basic columns
-  @Default('')
   @Column({
-    field: 'client_sid',
-    type: DataType.STRING,
+    field: 'service_sid',
+    type: DataType.UUIDV4,
     primaryKey: true,
+    defaultValue: DataType.UUIDV4, // Or sql.uuidV1
   })
-  public clientSid!: string;
+  public serviceSid!: string;
 
   @Column({
-    field: 'client_uid',
+    field: 'service_configuration_sid',
     type: DataType.STRING,
   })
-  public clientUid!: string;
+  public serviceConfigurationSid!: string;
 
   @Column({
-    field: 'client_code',
+    field: 'service_configuration_uid',
     type: DataType.STRING,
   })
-  public clientCode!: string;
+  public serviceConfigurationUid!: string;
   // #endregion
 
   // #region advanced columns
   @Column({
-    field: 'client_id',
+    field: 'service_configuration_code',
     type: DataType.STRING,
   })
-  public clientId!: string;
+  public serviceConfigurationCode!: string;
 
   @Column({
-    field: 'client_key',
+    field: 'configuration_key',
     type: DataType.STRING,
+    validate: {
+      isEmail: true,
+    },
   })
-  public clientKey!: string;
+  public configurationKey!: string;
 
   @Column({
-    field: 'client_name',
+    field: 'configuration_value',
     type: DataType.STRING,
   })
-  public clientName!: string;
+  public configurationValue!: string;
+
+  @Column({
+    field: 'service_configuration_status',
+    type: DataType.BOOLEAN,
+  })
+  public serviceConfigurationStatus!: boolean;
   // #endregion
 
   // #region Created and Modified
@@ -74,15 +82,10 @@ export class Client extends Model {
   })
   public modifiedBy!: string;
 
-  @Default(dayjs().format('YYYY-MM-DD HH:mm:ss'))
   @Column({
     field: 'modified_date',
     type: DataType.DATE,
   })
   public modifiedDate!: string;
-  // #endregion
-
-  // #region relations
-
   // #endregion
 }

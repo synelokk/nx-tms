@@ -86,11 +86,11 @@ export const DB_CLIENT = registerAs('DB_CLIENT', () => ({
  * - `DB_PRODUCT_NAME`
  */
 export const DB_PRODUCT = registerAs('DB_PRODUCT', () => ({
-  HOST: process.env['DB_PRODUCT_HOST'] || '127.0.0.1',
-  PORT: process.env['DB_PRODUCT_PORT'] || 1433,
-  USER: process.env['DB_PRODUCT_USER'] || 'root',
-  PASSWORD: process.env['DB_PRODUCT_PASSWORD'] || 'root123',
-  NAME: process.env['DB_PRODUCT_NAME'] || 'MSN_PRODUCT',
+  HOST: process.env['DB_MSN_PRODUCT_HOST'] || '127.0.0.1',
+  PORT: process.env['DB_MSN_PRODUCT_PORT'] || 1433,
+  USER: process.env['DB_MSN_PRODUCT_USER'] || 'root',
+  PASSWORD: process.env['DB_MSN_PRODUCT_PASSWORD'] || 'root123',
+  NAME: process.env['DB_MSN_PRODUCT_NAME'] || 'MSN_PRODUCT',
 }));
 
 /**

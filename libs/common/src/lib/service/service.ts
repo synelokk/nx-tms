@@ -2,7 +2,12 @@ import { AbstractService } from './service.abstract';
 import { Model } from 'sequelize-typescript';
 import { Repository } from '../repository';
 import { Injectable } from '@nestjs/common';
-import { ClassConstructor, plainToInstance } from 'class-transformer';
+import {
+  ClassConstructor,
+  ClassTransformOptions,
+  plainToInstance,
+} from 'class-transformer';
+import { IncludeOptions, WhereOptions } from 'sequelize';
 
 /**
  * Generic service class that provides common CRUD operations for entities.
@@ -22,8 +27,12 @@ export class Service<T extends Model<T>> implements AbstractService<T> {
    * @param {ClassConstructor<R>} [mapDto] - The DTO class constructor to map the records to.
    * @returns {Promise<T[] | R[]>} - A promise that resolves to an array of records or mapped DTOs.
    */
-  public async findAll<R>(mapDto?: ClassConstructor<R>): Promise<T[] | R[]> {
-    const data = await this.repository.findAll();
+  public async findAll<R>(
+    mapDto?: ClassConstructor<R>,
+    where?: WhereOptions<T>,
+    options?: IncludeOptions,
+  ): Promise<T[] | R[]> {
+    const data = await this.repository.findAll(where, options);
     if (mapDto) {
       return data.map((item) => {
         return plainToInstance(mapDto, item);
@@ -70,14 +79,20 @@ export class Service<T extends Model<T>> implements AbstractService<T> {
    */
   public async create<R>(
     data: any,
-    mapDto?: ClassConstructor<R>,
+    mapDto?: {
+      dto?: ClassConstructor<R>;
+      options?: ClassTransformOptions;
+    },
   ): Promise<T | R> {
     //await this.logger.debug(`Call service create`);
     const entity = await this.repository.create(data);
-    if (mapDto) {
-      const dto = plainToInstance(mapDto, entity, {
-        exposeUnsetFields: false,
-      });
+    if (mapDto && mapDto.dto) {
+      if (!mapDto.options)
+        mapDto.options = {
+          exposeUnsetFields: false,
+        };
+
+      const dto = plainToInstance(mapDto.dto, entity, mapDto.options);
       return dto;
     }
     return entity as T;
@@ -125,5 +140,12 @@ export class Service<T extends Model<T>> implements AbstractService<T> {
     return this.repository.storedProcedure(spName, parameter).catch((error) => {
       throw error;
     });
+  }
+
+  public async findByWhere(
+    where?: WhereOptions<T>,
+    options?: IncludeOptions,
+  ): Promise<T | T[]> {
+    return this.repository.findByWhere(where, options);
   }
 }

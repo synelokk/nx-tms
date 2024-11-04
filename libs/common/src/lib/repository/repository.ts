@@ -253,8 +253,9 @@ export class Repository<T extends Model<T>> implements AbstractRepository<T> {
         ...options,
       });
 
-      if (founded.length === 1) return founded[0];
-      else if (founded.length > 1) return founded;
+      if (founded.length === 1) return founded[0].get({ plain: true }) as T;
+      else if (founded.length > 1)
+        return founded.map((data) => data.get({ plain: true })) as T[];
       return null;
     } catch (error) {
       throw new DatabaseError(error as DatabaseErrorParent);

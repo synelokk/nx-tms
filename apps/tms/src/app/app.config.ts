@@ -1,6 +1,11 @@
 import { ConfigModule, ConfigType, registerAs } from '@nestjs/config';
 import { ClientsModule, Transport } from '@nestjs/microservices';
-import { DBAuthModule, DBClientModule, CommonModule } from '@tms/common';
+import {
+  DBAuthModule,
+  DBClientModule,
+  CommonModule,
+  DBProductModule,
+} from '@tms/common';
 import { ClientModule } from './client/client.module';
 import { UserModule } from './user/user.module';
 
@@ -17,6 +22,7 @@ export const BaseModule = [
   CommonModule,
   DBClientModule,
   DBAuthModule,
+  DBProductModule,
   ClientsModule.register([
     {
       name: 'LOGGER_SERVICE',

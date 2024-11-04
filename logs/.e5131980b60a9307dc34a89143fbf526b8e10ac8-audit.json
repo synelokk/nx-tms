@@ -9,6 +9,11 @@
             "date": 1730445398503,
             "name": "logs\\ServiceTMS-LOG.2024-11-01.log",
             "hash": "03e4e60f69d3365ca88e0ecfa5238af17b1147903bef45a6cd483ee39d8d0ec9"
+        },
+        {
+            "date": 1730700614240,
+            "name": "logs\\ServiceTMS-LOG.2024-11-04.log",
+            "hash": "bc941e63da4a7da7dff815c448ee899f213fa88ab908dc9d1310035aae163347"
         }
     ],
     "hashType": "sha256"

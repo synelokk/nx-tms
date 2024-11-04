@@ -37,6 +37,9 @@ export class NotFoundExceptionFilter implements ExceptionFilter {
     const xRequestId = request.headers['x-request-id'];
     const response = ctx.getResponse();
     this.logger.error(xRequestId, 'Page Not Found', `ERROR-${randomChar(16)}`);
-    response.sendFile(path.resolve('./libs/constant/src/frontend/404.html'));
+    response.status(404);
+    response.sendFile(
+      path.resolve('./libs/constant/src/lib/frontend/404.html'),
+    );
   }
 }

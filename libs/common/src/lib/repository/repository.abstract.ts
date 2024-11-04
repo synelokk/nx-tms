@@ -24,7 +24,7 @@ export abstract class AbstractRepository<T> implements IAbstractRepository<T> {
    */
 
   public abstract findAll(
-    where: WhereOptions<T>,
+    where?: WhereOptions<T>,
     options?: IncludeOptions,
   ): Promise<T[]>;
 

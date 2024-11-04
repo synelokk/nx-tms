@@ -1,5 +1,6 @@
-import { ClassConstructor } from 'class-transformer';
+import { ClassConstructor, ClassTransformOptions } from 'class-transformer';
 import { IService } from './service.interface';
+import { IncludeOptions, WhereOptions } from 'sequelize';
 
 /**
  * Abstract class representing a generic service with common CRUD operations.
@@ -13,7 +14,11 @@ export abstract class AbstractService<T> implements IService<T> {
    *
    * @returns A promise that resolves to an array of entities.
    */
-  public abstract findAll<R>(mapDto?: ClassConstructor<R>): Promise<T[] | R[]>;
+  public abstract findAll<R>(
+    mapDto?: ClassConstructor<R>,
+    where?: WhereOptions<T>,
+    options?: IncludeOptions,
+  ): Promise<T[] | R[]>;
 
   /**
    * Finds an entity by its primary key.
@@ -39,7 +44,10 @@ export abstract class AbstractService<T> implements IService<T> {
    */
   public abstract create<R>(
     data: any,
-    mapDto?: ClassConstructor<R>,
+    mapDto?: {
+      dto?: ClassConstructor<R>;
+      options?: ClassTransformOptions;
+    },
   ): Promise<T | R>;
 
   /**
@@ -67,4 +75,18 @@ export abstract class AbstractService<T> implements IService<T> {
    * @returns A promise that resolves to the result of the stored procedure.
    */
   public abstract storedProcedure(spName: string, parameter: any): Promise<any>;
+
+  /**
+   * @method findByWhere
+   *
+   * Finds an entity by a specified condition.
+   * This method returns a promise that resolves to the found entity.
+   *
+   * @param {WhereOptions<T>} where - The condition to find the entity.
+   * @returns {Promise<T>} A promise that resolves to the found entity.
+   */
+  public abstract findByWhere(
+    where?: WhereOptions<T>,
+    options?: IncludeOptions,
+  ): Promise<T | T[] | null>;
 }

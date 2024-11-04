@@ -51,7 +51,10 @@ export class ClientController {
     @Headers('x-request-id') xRequestId: string,
     @Body() clientDto: ClientDto,
   ): Promise<any> {
-    const data1 = await this.clientService.create(clientDto, ClientDto);
+    console.log('clientDto', clientDto);
+    const data1 = await this.clientService.create(clientDto, {
+      dto: ClientDto,
+    });
     await this.logger.debug(xRequestId, `Call service create`);
     return data1;
   }

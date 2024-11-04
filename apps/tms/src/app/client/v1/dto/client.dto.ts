@@ -1,11 +1,6 @@
-import { ApiProperty } from '@nestjs/swagger';
 import { Expose } from 'class-transformer';
 
 export class ClientDto {
-  @ApiProperty({
-    description: 'Client ID',
-    example: '1',
-  })
   @Expose({ name: 'id', toPlainOnly: true })
   public id: number;
 

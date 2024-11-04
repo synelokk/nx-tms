@@ -1,20 +1,16 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import {
-  Service,
-  ClientEntity,
-  LogEntity,
-  ClientRepository,
-} from '@tms/common';
+import { Service, ClientEntity, LogEntity } from '@tms/common';
 import { ConfigService } from '@nestjs/config';
 import { DateNow } from '@tms/utils';
 import { AppRepository } from './app.repository';
+import { ClientService } from './client/client.service';
 
 @Injectable()
 export class AppService extends Service<LogEntity> implements OnModuleInit {
   constructor(
     private readonly configService: ConfigService,
     public readonly logRepository: AppRepository,
-    public readonly clientRepository: ClientRepository,
+    public readonly clientService: ClientService,
   ) {
     super(logRepository);
   }
@@ -24,15 +20,10 @@ export class AppService extends Service<LogEntity> implements OnModuleInit {
     this.configService.set('LOG.SERVICE_KEY', process.env['SERVICE_KEY']);
   }
 
-  public async create(data: any): Promise<LogEntity> {
-    const client: ClientEntity = (await this.clientRepository.findByWhere(
-      {
-        clientId: data.clientId,
-      },
-      {
-        limit: 1,
-      },
-    )) as ClientEntity;
+  public override async create(data: any): Promise<LogEntity> {
+    const client: ClientEntity = await this.clientService.findByClientId(
+      data.clientId,
+    );
 
     data.clientSid = client.clientSid;
     data.serviceSid = client.clientSid;

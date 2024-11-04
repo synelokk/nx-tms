@@ -79,8 +79,9 @@ export class ErrorInterceptor implements NestInterceptor {
 
     return next.handle().pipe(
       catchError((error) => {
-        console.log(error);
         let err = error;
+        const errorCode = `ERROR-${randomChar(16)}`;
+        err.errorCode = errorCode;
         if (err.name === 'SequelizeDatabaseError') {
           err = new DatabaseException({
             requestId: xRequestId,
@@ -88,7 +89,6 @@ export class ErrorInterceptor implements NestInterceptor {
             error,
           });
         } else {
-          err.errorCode = `ERROR-${randomChar(16)}`;
           err = new ErrorException({
             requestId: xRequestId,
             language,
@@ -106,7 +106,7 @@ export class ErrorInterceptor implements NestInterceptor {
         this.logger.error(
           xRequestId,
           customError?.message ?? error?.message ?? null,
-          err?.cause ?? null,
+          errorCode ?? err?.cause,
           err?.stack ?? null,
         );
         this.logger.warn(

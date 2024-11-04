@@ -43,7 +43,7 @@ export class ResponseInterceptor implements NestInterceptor {
     const ctx = context.switchToHttp();
     const req = ctx.getRequest();
     const res = ctx.getResponse<Response>();
-    const language = req.query.lang || 'ID';
+    const language = req.query.lang?.toUpperCase() || 'ID';
     return next.handle().pipe(
       map(async (data) => {
         const customSuccess = this.reflector.get<ISuccessMessageOptions>(

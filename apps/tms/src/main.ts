@@ -2,9 +2,10 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
 import cookieParser from 'cookie-parser';
 import {
-  // ValidationPipe,
+  ValidationPipe,
   Logger,
   LoggerConfig,
+  NotFoundExceptionFilter,
 } from '@tms/common';
 import { WinstonModule } from 'nest-winston';
 import { ConfigService } from '@nestjs/config';
@@ -18,15 +19,14 @@ async function bootstrap(): Promise<void> {
     logger: WinstonModule.createLogger(logger.getLoggerConfig()),
   });
   const globalPrefix = 'tms/api';
-  const port = process.env['PORT'] || 3000;
   app.enableCors();
   app.setGlobalPrefix(globalPrefix);
   app.enableVersioning();
   app.use(cookieParser());
-  // app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalPipes(new ValidationPipe());
   const loggerService = await app.resolve(Logger);
   app.useGlobalFilters(
-    // new NotFoundExceptionFilter(loggerService),
+    new NotFoundExceptionFilter(loggerService),
     new ForbiddenExceptionFilter(loggerService),
   );
 
@@ -39,13 +39,17 @@ async function bootstrap(): Promise<void> {
   // const document = SwaggerModule.createDocument(app, config);
   // SwaggerModule.setup('swagger', app, document);
 
-  await app.listen(port);
+  const appConfig = await app.resolve(ConfigService);
+  const timeZone = appConfig.get('TIMEZONE');
 
-  NestLogger.log(
-    `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`,
-  );
+  app.init().then((apps) => {
+    const port = appConfig.get('TMS.PORT') || 3000;
+    apps.listen(port);
+    NestLogger.log(
+      `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`,
+    );
 
-  const timeZone = app.get(ConfigService).get('TIMEZONE');
-  process.env['TZ'] = timeZone;
+    process.env['TZ'] = timeZone;
+  });
 }
 bootstrap();
