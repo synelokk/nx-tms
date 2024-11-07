@@ -71,6 +71,20 @@ export class Service<T extends Model<T>> implements AbstractService<T> {
   }
 
   /**
+   * Finds an entity by the given condition.
+   *
+   * @param where - The condition to find the entity.
+   * @returns A promise that resolves to the found entity.
+   * @throws Will throw an error if the entity cannot be found.
+   */
+  public async findOne(where: WhereOptions<T>): Promise<T> {
+    //await this.logger.debug(`Call service findOne`);
+    return this.repository.findOne(where).catch((error) => {
+      throw error;
+    });
+  }
+
+  /**
    * Creates a new entity in the repository.
    *
    * @param data - The data to create the new entity with.
@@ -142,10 +156,53 @@ export class Service<T extends Model<T>> implements AbstractService<T> {
     });
   }
 
+  /**
+   * Finds an entity by a specified condition.
+   *
+   * @param where - The condition to find the entity.
+   * @returns A promise that resolves to the found entity.
+   */
   public async findByWhere(
     where?: WhereOptions<T>,
     options?: IncludeOptions,
-  ): Promise<T | T[]> {
+  ): Promise<T | T[] | null> {
+    //await this.logger.debug(`Call service findByWhere`);
     return this.repository.findByWhere(where, options);
+  }
+  /**
+   * Updates entities that meet the specified condition.
+   *
+   * @param where - The condition to update the entities.
+   * @param data - The new data for the entities.
+   * @returns A promise that resolves to an array containing the number of affected rows.
+   */
+  public async updateByWhere(
+    where: WhereOptions<T>,
+    data: any,
+  ): Promise<[number]> {
+    //await this.logger.debug(`Call service updateByWhere`);
+    return this.repository.updateByWhere(where, data);
+  }
+
+  /**
+   * Deletes entities that meet the specified condition.
+   *
+   * @param where - The condition to delete the entities.
+   * @returns A promise that resolves to the number of affected rows.
+   */
+  public async deleteByWhere(where: WhereOptions<T>): Promise<number> {
+    //await this.logger.debug(`Call service deleteByWhere`);
+    return this.repository.deleteByWhere(where);
+  }
+
+  /**
+   * Counts the number of records in the repository.
+   *
+   * @param where - The condition to count the records.
+   * @returns A promise that resolves to the number of records.
+   */
+  public async count(where?: WhereOptions<T>): Promise<number> {
+    //await this.logger.debug(`Call service count`);
+    return this.repository.count(where);
   }
 }

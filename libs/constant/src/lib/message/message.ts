@@ -143,7 +143,6 @@ export function response<T>({
   | SuccessResponseDTO<T> {
   type = type as TResponseType;
   if (process.env['NODE_ENV'] !== 'development') error = undefined;
-
   if (Object.keys(ErrorResponse[language]).includes(type)) {
     return responseError({
       requestId,

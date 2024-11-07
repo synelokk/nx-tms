@@ -12,6 +12,7 @@ import {
   tableName: 'log',
   schema: 'dbo',
   updatedAt: false,
+  createdAt: false,
 })
 export class Log extends Model {
   @Column({
@@ -49,7 +50,7 @@ export class Log extends Model {
     field: 'log_type',
     type: DataType.STRING,
   })
-  public logType!: 'info' | 'error' | 'warning' | 'debug' | 'verbose';
+  public logType!: 'INFO' | 'ERROR' | 'WARNING' | 'DEBUG' | 'VERBOSE';
 
   @Column({
     field: 'client_sid',
@@ -112,13 +113,5 @@ export class Log extends Model {
     type: DataType.STRING,
   })
   public createdBy!: string;
-
-  @CreatedAt
-  @Column({
-    field: 'created_date',
-    type: DataType.STRING,
-    defaultValue: DateNowUtc,
-  })
-  public createdDate!: CreationOptional<Date>;
   // #endregion
 }

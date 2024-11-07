@@ -85,7 +85,7 @@ export class ClientController {
   }
 
   @Get({
-    url: ':id',
+    url: ':sid',
     documentation: {
       status: HttpStatus.OK,
       summary: 'Find client by id',
@@ -98,15 +98,15 @@ export class ClientController {
       },
     },
   })
-  public async findById(
+  public async findBySid(
     @Headers('x-request-id') xRequestId: string,
-    @Param('id') id: number,
+    @Param('sid') sid: string,
   ): Promise<any> {
-    await this.logger.debug(xRequestId, `Call API Client findById`);
-    const data2 = await this.clientService.findById(id);
-    await this.logger.debug(xRequestId, `Request Service Client findById`);
+    await this.logger.debug(xRequestId, `Call API Client findBySid`);
+    const data2 = await this.clientService.findByPk(sid);
+    await this.logger.debug(xRequestId, `Request Service Client findBySid`);
     if (!data2) throw new DataNotFoundException();
-    await this.logger.debug(xRequestId, `Response Service Client findById`);
+    await this.logger.debug(xRequestId, `Response Service Client findBySid`);
 
     return data2;
   }

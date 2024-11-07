@@ -3,7 +3,6 @@ import { AuthorizationModule } from './authorization/authorization.module';
 import { LoggerModule } from './logger';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { ConfigurationModule } from './configuration';
-import { ConfigurationService } from './configuration/configrutaion.service';
 
 /**
  * CommonModule is a NestJS module that configures and provides common services
@@ -50,7 +49,7 @@ import { ConfigurationService } from './configuration/configrutaion.service';
     LoggerModule,
     AuthorizationModule,
   ],
-  providers: [ConfigurationService],
-  exports: [ConfigurationService],
+  providers: [],
+  exports: [],
 })
 export class CommonModule {}

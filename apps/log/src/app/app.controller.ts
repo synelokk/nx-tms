@@ -8,7 +8,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @EventPattern('logger')
-  public async createLogger(@Payload() data: any): Promise<void> {
+  public async logger(@Payload() data: any): Promise<void> {
     console.log(data);
     this.appService.create(data);
   }

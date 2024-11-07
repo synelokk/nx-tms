@@ -10,7 +10,7 @@ export * from '../service/service.interface';
 export * from './documentation.interface';
 export * from './message.interface';
 
-export * from '../authorization/authorization.config';
+export * from '../logger/logger.interface';
 
 /**
  * Interface representing a class constructor.

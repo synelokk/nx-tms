@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { DB_PRODUCT } from '../../configuration';
-import { ServiceConfigurationEntity } from './entity';
+import { ServiceConfigurationEntity, ServiceEntity } from './entity';
 
 @Module({
   imports: [
@@ -27,7 +27,7 @@ import { ServiceConfigurationEntity } from './entity';
             enableArithAbort: true,
           },
         },
-        models: [ServiceConfigurationEntity],
+        models: [ServiceEntity, ServiceConfigurationEntity],
         logging: false,
       }),
       inject: [ConfigService],

@@ -116,6 +116,36 @@ export class Repository<T extends Model<T>> implements AbstractRepository<T> {
   }
 
   /**
+   * @method findOne
+   *
+   * Finds a record by a specified condition.
+   * This method returns a promise that resolves to the found record.
+   *
+   * @param where - The condition to find the record.
+   * @returns A promise that resolves to the found record, or rejects with a DatabaseError if an error occurs.
+   * @throws {DatabaseError} If there is an error during the find operation.
+   *
+   * @example
+   * ```ts
+   * const user = await userRepository.findOne({
+   *  where: {
+   *   email: '
+   * }
+   * });
+   * ```
+   */
+  public async findOne(where: WhereOptions<T>): Promise<T | null> {
+    try {
+      const data = await this.model.findOne({
+        where,
+      });
+      return data?.get() as T;
+    } catch (error) {
+      throw new DatabaseError(error as DatabaseErrorParent);
+    }
+  }
+
+  /**
    * @method create
    *
    * Creates a new instance of the model with the provided data.
@@ -276,6 +306,46 @@ export class Repository<T extends Model<T>> implements AbstractRepository<T> {
   public updateByWhere(where: WhereOptions<T>, data: T): Promise<[number]> {
     return this.model
       .update(data, {
+        where,
+      })
+      .catch((error) => {
+        throw new DatabaseError(error as DatabaseErrorParent);
+      });
+  }
+
+  /**
+   * @method deleteByWhere
+   *
+   * Deletes a record by a specified condition.
+   * This method returns a promise that resolves to the number of affected rows.
+   *
+   * @param where - The condition to find the record.
+   * @returns A promise that resolves to the number of affected rows.
+   * @throws {DatabaseError} If an error occurs during the delete operation.
+   */
+  public deleteByWhere(where: WhereOptions<T>): Promise<number> {
+    return this.model
+      .destroy({
+        where,
+      })
+      .catch((error) => {
+        throw new DatabaseError(error as DatabaseErrorParent);
+      });
+  }
+
+  /**
+   * @method count
+   *
+   * Counts the number of records that match the specified condition.
+   * This method returns a promise that resolves to the number of records.
+   *
+   * @param where - The condition to count the records.
+   * @returns A promise that resolves to the number of records that match the condition.
+   * @throws {DatabaseError} If an error occurs during the count operation.
+   */
+  public count(where?: WhereOptions<T>): Promise<number> {
+    return this.model
+      .count({
         where,
       })
       .catch((error) => {

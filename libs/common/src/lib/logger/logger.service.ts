@@ -10,6 +10,7 @@ import { INQUIRER } from '@nestjs/core';
 import { ClientProxy } from '@nestjs/microservices';
 import { firstValueFrom } from 'rxjs';
 import { AggregateError } from 'sequelize';
+import { ILoggerData } from './logger.interface';
 
 @Injectable({ scope: Scope.TRANSIENT })
 export class Logger implements LoggerService {
@@ -52,24 +53,25 @@ export class Logger implements LoggerService {
    */
   public async log(xRequestId: string, message: string): Promise<void> {
     this.logger.log(`(${xRequestId}) ${message}`);
-    await firstValueFrom(
-      this.client.emit('logger', {
-        logSid: xRequestId,
-        type: 'info',
-        clientId: this.configService.get('APP.CLIENT_ID'),
-        serviceId: this.configService.get('SERVICE_ID'),
-        message,
-      }),
-    ).catch((error: AggregateError) => {
-      if (error.errors?.length > 0) {
-        return this.logger.error(
-          `${error.errors[0].message} ${message}`,
-          error.errors[0].stack,
-        );
-      } else {
-        return this.logger.error(`${error.message} ${message}`, error.stack);
-      }
-    });
+    const loggerData: ILoggerData = {
+      logSid: xRequestId,
+      type: 'INFO',
+      clientId: this.configService.get('APP.CLIENT_ID'),
+      serviceId: this.configService.get('SERVICE_ID'),
+      message,
+    };
+    await firstValueFrom(this.client.emit('logger', loggerData)).catch(
+      (error: AggregateError) => {
+        if (error.errors?.length > 0) {
+          return this.logger.error(
+            `${error.errors[0].message} ${message}`,
+            error.errors[0].stack,
+          );
+        } else {
+          return this.logger.error(`${error.message} ${message}`, error.stack);
+        }
+      },
+    );
   }
 
   /**
@@ -86,25 +88,26 @@ export class Logger implements LoggerService {
     detail?: string,
   ): Promise<void> {
     this.logger.warn(`(${xRequestId}) ${message}`);
-    await firstValueFrom(
-      this.client.emit('logger', {
-        logSid: xRequestId,
-        type: 'info',
-        clientId: this.configService.get('APP.CLIENT_ID'),
-        serviceId: this.configService.get('SERVICE_ID'),
-        message,
-        detail,
-      }),
-    ).catch((error: AggregateError) => {
-      if (error.errors?.length > 0) {
-        return this.logger.error(
-          `${error.errors[0].message} ${message}`,
-          error.errors[0].stack,
-        );
-      } else {
-        return this.logger.error(`${error.message} ${message}`, error.stack);
-      }
-    });
+    const loggerData: ILoggerData = {
+      logSid: xRequestId,
+      type: 'INFO',
+      clientId: this.configService.get('APP.CLIENT_ID'),
+      serviceId: this.configService.get('SERVICE_ID'),
+      message,
+      detail,
+    };
+    await firstValueFrom(this.client.emit('logger', loggerData)).catch(
+      (error: AggregateError) => {
+        if (error.errors?.length > 0) {
+          return this.logger.error(
+            `${error.errors[0].message} ${message}`,
+            error.errors[0].stack,
+          );
+        } else {
+          return this.logger.error(`${error.message} ${message}`, error.stack);
+        }
+      },
+    );
   }
 
   /**
@@ -121,24 +124,25 @@ export class Logger implements LoggerService {
    */
   public async debug(xRequestId: string, message: string): Promise<void> {
     this.logger.debug(`(${xRequestId}) ${message}`);
-    await firstValueFrom(
-      this.client.emit('logger', {
-        logSid: xRequestId,
-        type: 'info',
-        clientId: this.configService.get('APP.CLIENT_ID'),
-        serviceId: this.configService.get('SERVICE_ID'),
-        message,
-      }),
-    ).catch((error: AggregateError) => {
-      if (error.errors?.length > 0) {
-        return this.logger.error(
-          `${error.errors[0].message} ${message}`,
-          error.errors[0].stack,
-        );
-      } else {
-        return this.logger.error(`${error.message} ${message}`, error.stack);
-      }
-    });
+    const loggerData: ILoggerData = {
+      logSid: xRequestId,
+      type: 'INFO',
+      clientId: this.configService.get('APP.CLIENT_ID'),
+      serviceId: this.configService.get('SERVICE_ID'),
+      message,
+    };
+    await firstValueFrom(this.client.emit('logger', loggerData)).catch(
+      (error: AggregateError) => {
+        if (error.errors?.length > 0) {
+          return this.logger.error(
+            `${error.errors[0].message} ${message}`,
+            error.errors[0].stack,
+          );
+        } else {
+          return this.logger.error(`${error.message} ${message}`, error.stack);
+        }
+      },
+    );
   }
 
   /**
@@ -155,24 +159,25 @@ export class Logger implements LoggerService {
    */
   public async verbose(xRequestId: string, message: string): Promise<void> {
     this.logger.verbose(`(${xRequestId}) ${message}`);
-    await firstValueFrom(
-      this.client.emit('logger', {
-        logSid: xRequestId,
-        type: 'info',
-        clientId: this.configService.get('APP.CLIENT_ID'),
-        serviceId: this.configService.get('SERVICE_ID'),
-        message,
-      }),
-    ).catch((error: AggregateError) => {
-      if (error.errors?.length > 0) {
-        return this.logger.error(
-          `${error.errors[0].message} ${message}`,
-          error.errors[0].stack,
-        );
-      } else {
-        return this.logger.error(`${error.message} ${message}`, error.stack);
-      }
-    });
+    const loggerData: ILoggerData = {
+      logSid: xRequestId,
+      type: 'INFO',
+      clientId: this.configService.get('APP.CLIENT_ID'),
+      serviceId: this.configService.get('SERVICE_ID'),
+      message,
+    };
+    await firstValueFrom(this.client.emit('logger', loggerData)).catch(
+      (error: AggregateError) => {
+        if (error.errors?.length > 0) {
+          return this.logger.error(
+            `${error.errors[0].message} ${message}`,
+            error.errors[0].stack,
+          );
+        } else {
+          return this.logger.error(`${error.message} ${message}`, error.stack);
+        }
+      },
+    );
   }
 
   /**
@@ -190,24 +195,25 @@ export class Logger implements LoggerService {
    */
   public async info(xRequestId: string, message: string): Promise<void> {
     this.logger.log(`(${xRequestId}) ${message}`);
-    await firstValueFrom(
-      this.client.emit('logger', {
-        logSid: xRequestId,
-        type: 'info',
-        clientId: this.configService.get('APP.CLIENT_ID'),
-        serviceId: this.configService.get('SERVICE_ID'),
-        message,
-      }),
-    ).catch((error: AggregateError) => {
-      if (error.errors?.length > 0) {
-        return this.logger.error(
-          `${error.errors[0].message} ${message}`,
-          error.errors[0].stack,
-        );
-      } else {
-        return this.logger.error(`${error.message} ${message}`, error.stack);
-      }
-    });
+    const loggerData: ILoggerData = {
+      logSid: xRequestId,
+      type: 'INFO',
+      clientId: this.configService.get('APP.CLIENT_ID'),
+      serviceId: this.configService.get('SERVICE_ID'),
+      message,
+    };
+    await firstValueFrom(this.client.emit('logger', loggerData)).catch(
+      (error: AggregateError) => {
+        if (error.errors?.length > 0) {
+          return this.logger.error(
+            `${error.errors[0].message} ${message}`,
+            error.errors[0].stack,
+          );
+        } else {
+          return this.logger.error(`${error.message} ${message}`, error.stack);
+        }
+      },
+    );
   }
 
   /**
@@ -228,25 +234,26 @@ export class Logger implements LoggerService {
     stack?: any,
   ): void {
     this.logger.error(`(${xRequestId}) ${message}`, stack);
-    firstValueFrom(
-      this.client.emit('logger', {
-        logSid: xRequestId,
-        type: 'error',
-        clientId: this.configService.get('APP.CLIENT_ID'),
-        serviceId: this.configService.get('SERVICE_ID'),
-        message,
-        detail: stack,
-        code: errorCode,
-      }),
-    ).catch((error: AggregateError) => {
-      if (error.errors?.length > 0) {
-        return this.logger.error(
-          `${error.errors[0].message} ${message}`,
-          error.errors[0].stack,
-        );
-      } else {
-        return this.logger.error(`${error.message} ${message}`, error.stack);
-      }
-    });
+    const loggerData: ILoggerData = {
+      logSid: xRequestId,
+      type: 'ERROR',
+      clientId: this.configService.get('APP.CLIENT_ID'),
+      serviceId: this.configService.get('SERVICE_ID'),
+      message,
+      detail: stack,
+      code: errorCode,
+    };
+    firstValueFrom(this.client.emit('logger', loggerData)).catch(
+      (error: AggregateError) => {
+        if (error.errors?.length > 0) {
+          return this.logger.error(
+            `${error.errors[0].message} ${message}`,
+            error.errors[0].stack,
+          );
+        } else {
+          return this.logger.error(`${error.message} ${message}`, error.stack);
+        }
+      },
+    );
   }
 }

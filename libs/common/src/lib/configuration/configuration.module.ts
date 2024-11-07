@@ -1,10 +1,12 @@
 import { Global, Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { APP } from './configuration.config';
-import { ConfigurationService } from './configrutaion.service';
-import { ClientRoleRepository } from '../database/client/repository/client-role.repository';
-import { ClientRepository } from '../database/client/repository/client.repository';
-import { ServiceConfigurationRepository } from '../database/product/repository/service-configuration.repository';
+import {
+  ClientRepository,
+  ClientRoleRepository,
+  ServiceConfigurationRepository,
+  ServiceRepository,
+} from '../database';
 /**
  * An array of environment file names used for configuration.
  *
@@ -45,15 +47,15 @@ const ENV = [`.env`, `.env.local`, `.env.development`];
     }),
   ],
   providers: [
-    ConfigurationService,
-    ClientRoleRepository,
     ClientRepository,
+    ClientRoleRepository,
+    ServiceRepository,
     ServiceConfigurationRepository,
   ],
   exports: [
-    ConfigurationService,
-    ClientRoleRepository,
     ClientRepository,
+    ClientRoleRepository,
+    ServiceRepository,
     ServiceConfigurationRepository,
   ],
 })

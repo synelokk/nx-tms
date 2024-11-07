@@ -51,6 +51,17 @@ export abstract class AbstractRepository<T> implements IAbstractRepository<T> {
   public abstract findByPk(sid: string): Promise<T>;
 
   /**
+   * @method findOne
+   *
+   * Finds an entity by a specified condition.
+   * This method returns a promise that resolves to the found entity.
+   *
+   * @param where - The condition to find the entity.
+   * @returns A promise that resolves to the found entity.
+   */
+  public abstract findOne(where: WhereOptions<T>): Promise<T | null>;
+
+  /**
    * @method create
    *
    * Creates a new entity.
@@ -126,4 +137,27 @@ export abstract class AbstractRepository<T> implements IAbstractRepository<T> {
     where: WhereOptions<T>,
     data: T,
   ): Promise<[number]>;
+
+  /**
+   * @method deleteByWhere
+   *
+   * Deletes an entity by a specified condition.
+   * This method returns a promise that resolves to the number of affected rows.
+   *
+   * @param {WhereOptions<T>} where - The condition to find the entity.
+   * @returns {Promise<number>} A promise that resolves to the number of affected rows
+   * @throws {DatabaseError} If an error occurs during the delete operation.
+   */
+  public abstract deleteByWhere(where: WhereOptions<T>): Promise<number>;
+
+  /**
+   * @method count
+   *
+   * Counts the number of entities in the database.
+   * This method returns a promise that resolves to the number of entities.
+   *
+   * @param {WhereOptions<T>} where - The condition to count the entities.
+   * @returns {Promise<number>} A promise that resolves to the number of entities.
+   */
+  public abstract count(where?: WhereOptions<T>): Promise<number>;
 }

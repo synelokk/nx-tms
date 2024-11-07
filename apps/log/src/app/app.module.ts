@@ -4,6 +4,7 @@ import {
   CommonModule,
   DBClientModule,
   DBLogModule,
+  DBProductModule,
   ErrorInterceptor,
 } from '@tms/common';
 import { AppController } from './app.controller';
@@ -11,16 +12,13 @@ import { AppService } from './app.service';
 import { AppRepository } from './app.repository';
 import { ConfigModule } from '@nestjs/config';
 import { AppConfig } from './app.config';
-import { ClientModule } from './client/client.module';
-import { ClientRepository } from './client/client.repository';
-import { ClientService } from './client/client.service';
 
 @Module({
   imports: [
     CommonModule,
     DBLogModule,
     DBClientModule,
-    forwardRef(() => ClientModule),
+    DBProductModule,
     ConfigModule.forRoot({
       cache: false,
       load: [AppConfig],
@@ -32,8 +30,6 @@ import { ClientService } from './client/client.service';
   providers: [
     AppService,
     AppRepository,
-    ClientRepository,
-    ClientService,
     {
       provide: APP_INTERCEPTOR,
       useClass: ErrorInterceptor,

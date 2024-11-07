@@ -69,7 +69,7 @@ export class ErrorInterceptor implements NestInterceptor {
     next: CallHandler,
   ): Observable<any> {
     const req = context.switchToHttp().getRequest();
-    const language = req?.query?.lang || 'ID';
+    const language = req?.query?.lang.toUpperCase() || 'ID';
     const xRequestId = req?.headers ? req?.headers['x-request-id'] : guid();
 
     const customError = this.reflector.get<IErrorMessageOptions>(
@@ -99,10 +99,6 @@ export class ErrorInterceptor implements NestInterceptor {
           });
         }
 
-        if (process.env['NODE_ENV'] !== 'development') {
-          err.stack = undefined;
-        }
-
         this.logger.error(
           xRequestId,
           customError?.message ?? error?.message ?? null,
@@ -114,6 +110,11 @@ export class ErrorInterceptor implements NestInterceptor {
           `Response ${req?.protocol}://${req?.get('Host')}${req?.originalUrl}`,
           customError?.message ?? null,
         );
+
+        if (process.env['NODE_ENV'] !== 'development') {
+          err.stack = undefined;
+        }
+
         return throwError(() => err);
       }),
     );

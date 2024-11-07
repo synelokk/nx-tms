@@ -37,6 +37,14 @@ export abstract class AbstractService<T> implements IService<T> {
   public abstract findById(id: number): Promise<T>;
 
   /**
+   * Finds an entity by condition.
+   *
+   * @param where - The condition to find the entity.
+   * @returns A promise that resolves to the found entity.
+   */
+  public abstract findOne(where: WhereOptions<T>): Promise<T>;
+
+  /**
    * Creates a new entity.
    *
    * @param data - The data for the new entity.
@@ -89,4 +97,41 @@ export abstract class AbstractService<T> implements IService<T> {
     where?: WhereOptions<T>,
     options?: IncludeOptions,
   ): Promise<T | T[] | null>;
+
+  /**
+   * @method updateByWhere
+   *
+   * Updates entities that meet the specified condition.
+   * This method returns a promise that resolves to an array containing the number of affected rows.
+   *
+   * @param {WhereOptions<T>} where - The condition to update the entities.
+   * @param {any} data - The new data for the entities.
+   * @returns {Promise<[number]>} A promise that resolves to an array containing the number of affected rows.
+   */
+  public abstract updateByWhere(
+    where: WhereOptions<T>,
+    data: any,
+  ): Promise<[number]>;
+
+  /**
+   * @method deleteByWhere
+   *
+   * Deletes entities that meet the specified condition.
+   * This method returns a promise that resolves to the number of affected rows.
+   *
+   * @param {WhereOptions<T>} where - The condition to delete the entities.
+   * @returns {Promise<number>} A promise that resolves to the number of affected rows.
+   */
+  public abstract deleteByWhere(where: WhereOptions<T>): Promise<number>;
+
+  /**
+   * @method count
+   *
+   * Counts the number of entities that meet the specified condition.
+   * This method returns a promise that resolves to the number of entities.
+   *
+   * @param {WhereOptions<T>} where - The condition to count the entities.
+   * @returns {Promise<number>} A promise that resolves to the number of entities.
+   */
+  public abstract count(where?: WhereOptions<T>): Promise<number>;
 }
