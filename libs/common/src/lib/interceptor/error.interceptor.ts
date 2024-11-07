@@ -97,25 +97,27 @@ export class ErrorInterceptor implements NestInterceptor {
             env: process.env['NODE_ENV'] as keyof typeof ENVIRONMENT,
             timezone: process.env['TIMEZONE'],
           });
-        }
 
-        this.logger.error(
-          xRequestId,
-          customError?.message ?? error?.message ?? null,
-          errorCode ?? err?.cause,
-          err?.stack ?? null,
-        );
-        this.logger.warn(
-          xRequestId,
-          `Response ${req?.protocol}://${req?.get('Host')}${req?.originalUrl}`,
-          customError?.message ?? null,
-        );
+          this.logger.error(
+            xRequestId,
+            customError?.message ?? error?.message ?? null,
+            errorCode ?? err?.cause,
+            err?.stack ?? null,
+          );
+        }
 
         if (process.env['NODE_ENV'] !== 'development') {
           err.stack = undefined;
         }
 
-        return throwError(() => err);
+        return throwError(() => {
+          this.logger.warn(
+            xRequestId,
+            `Response ${req?.protocol}://${req?.get('Host')}${req?.originalUrl}`,
+            customError?.message ?? null,
+          );
+          return err;
+        });
       }),
     );
   }
