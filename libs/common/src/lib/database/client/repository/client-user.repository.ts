@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { Repository, ClientUserEntity } from '@tms/common';
+import { ClientUserEntity } from '../entity';
+import { Repository } from '../../../repository';
 
 @Injectable()
 export class ClientUserRepository extends Repository<ClientUserEntity> {

@@ -31,7 +31,7 @@ export class ClientController {
   })
   public async findAll(
     @Headers('x-request-id') xRequestId: string,
-  ): Promise<any> {
+  ): Promise<ClientDto[]> {
     const data1 = await this.clientService.findAll(ClientDto);
     this.logger.debug(xRequestId, `Call service findAll`);
     return data1;
@@ -97,11 +97,12 @@ export class ClientController {
         message: 'Success find client by id',
       },
     },
+    serialize: ClientDto,
   })
   public async findBySid(
     @Headers('x-request-id') xRequestId: string,
     @Param('sid') sid: string,
-  ): Promise<any> {
+  ): Promise<ClientDto> {
     this.logger.debug(xRequestId, `Call API Client findBySid`);
     const data2 = await this.clientService.findByPk(sid);
     this.logger.debug(xRequestId, `Request Service Client findBySid`);

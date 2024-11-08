@@ -7,6 +7,12 @@ import { Column, DataType, Default, Model, Table } from 'sequelize-typescript';
 })
 export class ClientUser extends Model {
   // #regions basic columns
+  @Column({
+    field: 'id',
+    type: DataType.INTEGER,
+  })
+  public override id!: number;
+
   @Default('')
   @Column({
     field: 'user_sid',
@@ -96,11 +102,5 @@ export class ClientUser extends Model {
     type: DataType.STRING,
   })
   public clientSid!: string;
-
-  @Column({
-    field: 'client_sid',
-    type: DataType.STRING,
-  })
-  public clientRoleSid!: string;
   // #endregion
 }

@@ -44,9 +44,6 @@ export class ServiceConfiguration extends Model {
   @Column({
     field: 'configuration_key',
     type: DataType.STRING,
-    validate: {
-      isEmail: true,
-    },
   })
   public configurationKey!: string;
 

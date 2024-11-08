@@ -1,11 +1,11 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { UserRepository } from '../user.repository';
-import { ClientUserRepository } from '../client-user.repository';
 import {
   Service,
   UserNotFoundException,
   ClientUserEntity,
   UserEntity,
+  ClientUserRepository,
 } from '@tms/common';
 import { UserLoginDto } from './dto/user.dto';
 import { WhereOptions } from 'sequelize';
@@ -14,9 +14,15 @@ import { WhereOptions } from 'sequelize';
 export class UserService extends Service<UserEntity> {
   constructor(
     public readonly userRepository: UserRepository,
-    public readonly clientUserRepository: ClientUserRepository
+    public readonly clientUserRepository: ClientUserRepository,
   ) {
     super(userRepository);
+  }
+
+  public async getClientUserBySid(sid: string): Promise<ClientUserEntity> {
+    return this.clientUserRepository.findOne({
+      userSid: sid,
+    });
   }
 
   public async login(payload: UserLoginDto): Promise<UserEntity> {
@@ -41,7 +47,7 @@ export class UserService extends Service<UserEntity> {
     }
 
     const client = (await this.clientUserRepository.findByWhere(
-      where
+      where,
     )) as ClientUserEntity;
 
     if (!client) {
@@ -53,7 +59,7 @@ export class UserService extends Service<UserEntity> {
 
   private async checkPassword(
     payload: UserLoginDto,
-    user: UserEntity
+    user: UserEntity,
   ): Promise<void> {
     if (user.password !== payload.password) {
       throw new BadRequestException('Password is incorrect');
