@@ -33,7 +33,7 @@ export class ClientController {
     @Headers('x-request-id') xRequestId: string,
   ): Promise<any> {
     const data1 = await this.clientService.findAll(ClientDto);
-    await this.logger.debug(xRequestId, `Call service findAll`);
+    this.logger.debug(xRequestId, `Call service findAll`);
     return data1;
   }
 
@@ -55,7 +55,7 @@ export class ClientController {
     const data1 = await this.clientService.create(clientDto, {
       dto: ClientDto,
     });
-    await this.logger.debug(xRequestId, `Call service create`);
+    this.logger.debug(xRequestId, `Call service create`);
     return data1;
   }
 
@@ -80,7 +80,7 @@ export class ClientController {
     const data1 = await this.clientService.storedProcedure('sp_Test', {
       id: 1,
     });
-    await this.logger.debug(xRequestId, `Call service storedProcedure`);
+    this.logger.debug(xRequestId, `Call service storedProcedure`);
     return data1;
   }
 
@@ -102,11 +102,11 @@ export class ClientController {
     @Headers('x-request-id') xRequestId: string,
     @Param('sid') sid: string,
   ): Promise<any> {
-    await this.logger.debug(xRequestId, `Call API Client findBySid`);
+    this.logger.debug(xRequestId, `Call API Client findBySid`);
     const data2 = await this.clientService.findByPk(sid);
-    await this.logger.debug(xRequestId, `Request Service Client findBySid`);
+    this.logger.debug(xRequestId, `Request Service Client findBySid`);
     if (!data2) throw new DataNotFoundException();
-    await this.logger.debug(xRequestId, `Response Service Client findBySid`);
+    this.logger.debug(xRequestId, `Response Service Client findBySid`);
 
     return data2;
   }

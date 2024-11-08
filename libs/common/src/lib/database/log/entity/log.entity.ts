@@ -1,12 +1,5 @@
-import { randomChar, DateNowUtc } from '@tms/utils';
-import { CreationOptional } from 'sequelize';
-import {
-  Column,
-  CreatedAt,
-  DataType,
-  Model,
-  Table,
-} from 'sequelize-typescript';
+import { randomChar } from '@tms/utils';
+import { Column, DataType, Model, Table } from 'sequelize-typescript';
 
 @Table({
   tableName: 'log',

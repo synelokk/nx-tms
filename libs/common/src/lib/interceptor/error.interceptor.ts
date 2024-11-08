@@ -69,7 +69,7 @@ export class ErrorInterceptor implements NestInterceptor {
     next: CallHandler,
   ): Observable<any> {
     const req = context.switchToHttp().getRequest();
-    const language = req?.query?.lang.toUpperCase() || 'ID';
+    const language = req?.query?.lang?.toUpperCase() || 'ID';
     const xRequestId = req?.headers ? req?.headers['x-request-id'] : guid();
 
     const customError = this.reflector.get<IErrorMessageOptions>(
@@ -80,7 +80,7 @@ export class ErrorInterceptor implements NestInterceptor {
     return next.handle().pipe(
       catchError((error) => {
         let err = error;
-        const errorCode = `ERROR-${randomChar(16)}`;
+        const errorCode = `ERROR-CODE-${randomChar(16)}`;
         err.errorCode = errorCode;
         if (err.name === 'SequelizeDatabaseError') {
           err = new DatabaseException({
@@ -106,16 +106,15 @@ export class ErrorInterceptor implements NestInterceptor {
           );
         }
 
-        if (process.env['NODE_ENV'] !== 'development') {
-          err.stack = undefined;
-        }
-
         return throwError(() => {
           this.logger.warn(
             xRequestId,
             `Response ${req?.protocol}://${req?.get('Host')}${req?.originalUrl}`,
             customError?.message ?? null,
           );
+          if (process.env['NODE_ENV'] !== 'development') {
+            err.stack = undefined;
+          }
           return err;
         });
       }),

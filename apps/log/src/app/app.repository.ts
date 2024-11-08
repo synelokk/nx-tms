@@ -11,6 +11,7 @@ export class AppRepository extends Repository<LogEntity> {
     return this.model
       .create({
         logSid: data.logSid,
+        logCode: data.code,
         logType: data.type,
         message: data.message,
         serviceSid: data.serviceSid,

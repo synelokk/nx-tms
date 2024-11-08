@@ -50,7 +50,7 @@ export class ResponseInterceptor implements NestInterceptor {
           SUCCESS_MESSAGE_METADATA,
           context.getHandler(),
         );
-        await this.logger.warn(
+        this.logger.warn(
           req.headers['x-request-id'],
           `Response ${customSuccess.message}`,
         );

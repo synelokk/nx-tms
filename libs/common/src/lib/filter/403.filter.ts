@@ -17,7 +17,11 @@ export class ForbiddenExceptionFilter implements ExceptionFilter {
     const request = ctx.getRequest<Request>();
     const response = ctx.getResponse<Response>();
     const xRequestId = request.headers['x-request-id'] as string;
-    this.logger.error(xRequestId || '', 'Forbidden', `ERROR-${randomChar(16)}`);
+    this.logger.error(
+      xRequestId || '',
+      'Forbidden',
+      `ERROR-CODE-${randomChar(16)}`,
+    );
     return response.sendFile(
       path.resolve('./libs/constant/src/frontend/403.html'),
     );

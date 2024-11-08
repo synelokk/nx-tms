@@ -4,6 +4,7 @@ export interface ILoggerData {
   clientId: string;
   serviceId: string;
   message: string;
+  logDate: string;
   detail?: string;
   code?: string;
 }

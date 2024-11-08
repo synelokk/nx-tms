@@ -31,11 +31,7 @@ export class RequestMiddleware implements NestMiddleware {
     const url = `${req.protocol}://${req.get('Host')}${req.originalUrl}`;
     const xRequestId = guid();
     req.headers['x-request-id'] = xRequestId;
-    await this.logger.warn(
-      xRequestId,
-      `Request ${url}`,
-      JSON.stringify(req.body),
-    );
+    this.logger.warn(xRequestId, `Request ${url}`, JSON.stringify(req.body));
     await next();
   }
 }

@@ -8,7 +8,6 @@ import {
   ServiceRepository,
 } from '@tms/common';
 import { ConfigService } from '@nestjs/config';
-import { DateNow } from '@tms/utils';
 import { AppRepository } from './app.repository';
 
 @Injectable()
@@ -39,9 +38,7 @@ export class AppService extends Service<LogEntity> implements OnModuleInit {
     data.clientSid = client.clientSid;
     data.serviceSid = service.serviceSid;
     data.logCode = data.code;
-    data.logDate = DateNow();
-    return this.appRepository.create(data).catch((error) => {
-      throw error;
-    });
+    const result = await this.appRepository.create(data);
+    return result;
   }
 }
